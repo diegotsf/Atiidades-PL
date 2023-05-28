@@ -1,0 +1,141 @@
+@charset "UTF-08";
+
+div
+{
+    background-image: url(lateral.jpg);
+    width: 1260px;
+}
+
+
+table#card {
+    width: 1200px;
+    height: auto;
+    background-image: url(fundo-papel.jpg);
+    border-image: url(lateral.jpg);
+    text-align: center;
+}
+
+td#titulo {
+    display: block;
+    font-size: 63px;
+    color: white;
+    font-display: top;
+    margin-bottom: 30px;
+}
+
+font.nome
+{
+    font-size: 25px;
+    position: relative;
+}
+
+font.Dobradinha 
+{
+    font-size: 25px;
+    position: relative;
+    display: block;
+    padding-bottom: 7px;
+}
+
+font.comida
+{
+    font-weight: 800;
+    font-size: 40px;
+    position: relative;
+}
+
+
+td#rosa 
+{
+    background-color: rgb(255, 0, 157);
+    
+}
+
+td#marrom 
+{
+    background-color: #cd853f 
+}
+
+td#amarelo 
+{
+    background-color: rgb(255, 217, 0)
+    
+}
+
+td#azul 
+{
+    background-color: rgb(0, 153, 255)
+}
+
+td#verde 
+{
+    background-color: rgb(2, 175, 2)
+}
+
+font#branco
+{
+    color: white;
+}
+
+font#yellow
+{
+    color: rgb(255, 217, 0);
+}
+
+td.restE
+{
+    display: block;
+    float: left;
+    margin-left: 80px;
+    position: relative;
+   width: 470px;
+    height: 140px;
+    border-radius: 20px;
+}
+
+td.restD
+{
+    
+    display: block;
+    float: right;
+    margin-right: 80px;
+    position: relative;
+   width: 470px;
+    height: 140px;
+    border-radius: 20px;
+}
+
+td.abaixoE
+{
+    text-align: center;
+    display: block;
+    float: left;
+    margin-left: 80px;
+    position: relative;
+   width: 470px;
+    height: 45px;
+}
+
+td.abaixoD
+{
+    text-align: center;
+    display: block;
+    float: right;
+    margin-right: 70px;
+    position: relative;
+    border-radius: 20px;
+   width: 470px;
+    height: 45px;
+}
+
+tr.lugar
+{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+td.restE b 
+{
+    font-weight: bolder;
+}
