@@ -1,0 +1,78 @@
+@charset 'UTF-08';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+body {
+    padding-top: 15vh;
+}
+
+h1 {
+    margin-bottom: 25px;
+}
+
+p {
+    margin-top: 25px;
+}
+
+.calendario {
+
+    margin: auto;
+    max-width: 50vw;
+}
+
+
+
+.mes {
+    border: 1px solid #7c7b7b;
+    padding: 15px;
+    border-radius: 5px;
+    text-align: center;
+    height: 50px;
+    width: 90px;
+}
+
+.dia {
+    border: 1px solid #7c7b7b;
+    padding: 15px;
+    height: 50px;
+    width: 90px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.junho {
+    text-align: center
+}
+
+.inferior {
+    text-align: center;
+    font-size: xx-small;
+}
+
+.display {
+    display: flex;
+}
+
+.cinza {
+    background-color: lightgray;
+}
+
+.feriado {
+    color: green;
+}
+
+.domingo {
+    background-color: yellow;
+    color: red;
+}
+
+.sabado {
+    background-color: rgb(203, 210, 252);
+    color: blue;
+}
