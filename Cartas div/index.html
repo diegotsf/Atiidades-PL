@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HTML Div Position</title>
+    <style>
+        #paus{
+            width: 340px;
+            height: 380px;
+            background-color: #000000;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+        }
+        #copas{
+            width: 340px;
+            height: 380px;
+            background-color: #ff0000;
+            position: absolute;
+            left: 341px;
+            top: 0px;
+        }
+        #ouro{
+            width: 340px;
+            height: 380px;
+            background-color: #ff0000;
+            position: absolute;
+            left: 0px;
+            top: 381px;
+        }
+        #espada{
+            width: 340px;
+            height: 380px;
+            background-color: #000000;
+            position: absolute;
+            left: 341px;
+            top: 381px;
+        }
+
+        p{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+            color: white;
+            text-align: center;
+        }
+        img
+        {
+            width: 75px;
+            height: 150px;
+            object-fit: contain;
+        }
+        div{
+            width: 75px;
+            height: 150px;
+            border-radius: 15px;
+        }
+
+
+        .card1011{
+            position: absolute;
+            top: 0px;
+            left: 10px;
+        }
+        .card1021{
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }
+        .card1031{
+            position: absolute;
+            top: 40px;
+            left: 50px;
+        }
+        .card1041{
+            position: absolute;
+            top: 60px;
+            left: 70px;
+        }
+        .card1051{
+            position: absolute;
+            top: 80px;
+            left: 90px;
+        }
+        .card1061{
+            position: absolute;
+            top: 100px;
+            left: 110px;
+        }
+        .card1071{
+            position: absolute;
+            top: 120px;
+            left: 130px;
+        }
+        .card1081{
+            position: absolute;
+            top: 140px;
+            left: 150px;
+        }
+        .card1091{
+            position: absolute;
+            top: 160px;
+            left: 170px;
+        }
+        .card1101{
+            position: absolute;
+            top: 180px;
+            left: 190px;
+        }
+        .card1111{
+            position: absolute;
+            top: 200px;
+            left: 210px;
+        }
+        .card1121{
+            position: absolute;
+            top: 220px;
+            left: 230px;
+        }
+        .card1131{
+            position: absolute;
+            top: 240px;
+            left: 250px;
+        }
+
+
+
+        .card3011{
+            position: absolute;
+            top: 0px;
+            left: 250px;
+        }
+        .card3021{
+            position: absolute;
+            top: 20px;
+            left: 230px;
+        }
+        .card3031{
+            position: absolute;
+            top: 40px;
+            left: 210px;
+        }
+        .card3041{
+            position: absolute;
+            top: 60px;
+            left: 190px;
+        }
+        .card3051{
+            position: absolute;
+            top: 80px;
+            left: 170px;
+        }
+        .card3061{
+            position: absolute;
+            top: 100px;
+            left: 150px;
+        }
+        .card3071{
+            position: absolute;
+            top: 120px;
+            left: 130px;
+        }
+        .card3081{
+            position: absolute;
+            top: 140px;
+            left: 110px;
+        }
+        .card3091{
+            position: absolute;
+            top: 160px;
+            left: 90px;
+        }
+        .card3101{
+            position: absolute;
+            top: 180px;
+            left: 70px;
+        }
+        .card3111{
+            position: absolute;
+            top: 200px;
+            left: 50px;
+        }
+        .card3121{
+            position: absolute;
+            top: 220px;
+            left: 30px;
+        }        
+        .card3131{
+            position: absolute;
+            top: 240px;
+            left: 10px;
+        }
+
+
+
+        .card4011{
+            position: absolute;
+            top: 240px;
+            left: 10px;
+        }
+        .card4021{
+            position: absolute;
+            top: 220px;
+            left: 30px;
+        }
+        .card4031{
+            position: absolute;
+            top: 200px;
+            left: 50px;
+        }
+        .card4041{
+            position: absolute;
+            top: 180px;
+            left: 70px;
+        }
+        .card4051{
+            position: absolute;
+            top: 160px;
+            left: 90px;
+        }
+        .card4061{
+            position: absolute;
+            top: 140px;
+            left: 110px;
+        }
+        .card4071{
+            position: absolute;
+            top: 120px;
+            left: 130px;
+        }
+        .card4081{
+            position: absolute;
+            top: 100px;
+            left: 150px;
+        }
+        .card4091{
+            position: absolute;
+            top: 80px;
+            left: 170px;
+        }
+        .card4101{
+            position: absolute;
+            top: 60px;
+            left: 190px;
+        }
+        .card4111{
+            position: absolute;
+            top: 40px;
+            left: 210px;
+        }
+        .card4121{
+            position: absolute;
+            top: 20px;
+            left: 230px;
+        }
+        .card4131{
+            position: absolute;
+            top: 0px;
+            left: 250px;
+        }
+
+
+
+        .card2011{
+            position: absolute;
+            top: 250px;
+            left: 250px;
+        }
+        .card2021{
+            position: absolute;
+            top: 230px;
+            left: 230px;
+        }
+        .card2031{
+            position: absolute;
+            top: 210px;
+            left: 210px;
+        }
+        .card2041{
+            position: absolute;
+            top: 190px;
+            left: 190px;
+        }
+        .card2051{
+            position: absolute;
+            top: 170px;
+            left: 170px;
+        }
+        .card2061{
+            position: absolute;
+            top: 150px;
+            left: 150px;
+        }
+        .card2071{
+            position: absolute;
+            top: 130px;
+            left: 130px;
+        }
+        .card2081{
+            position: absolute;
+            top: 110px;
+            left: 110px;
+        }
+        .card2091{
+            position: absolute;
+            top: 90px;
+            left: 90px;
+        }
+        .card2101{
+            position: absolute;
+            top: 60px;
+            left: 70px;
+        }
+        .card2111{
+            position: absolute;
+            top: 40px;
+            left: 50px;
+        }
+        .card2121{
+            position: absolute;
+            top: 20px;
+            left: 30px;
+        }        
+        .card2131{
+            position: absolute;
+            top: 0px;
+            left: 10px;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+    <div id="paus">
+    <p>Paus</p>
+       <div class="card1011"><img src="cartas/1011.jpg"></div>
+       <div class="card1021"><img src="cartas/1021.jpg"></div>
+       <div class="card1031"><img src="cartas/1031.jpg"></div>
+       <div class="card1041"><img src="cartas/1041.jpg"></div>
+       <div class="card1051"><img src="cartas/1051.jpg"></div>
+       <div class="card1061"><img src="cartas/1061.jpg"></div>
+       <div class="card1071"><img src="cartas/1071.jpg"></div>
+       <div class="card1081"><img src="cartas/1081.jpg"></div>
+       <div class="card1091"><img src="cartas/1091.jpg"></div>
+       <div class="card1101"><img src="cartas/1101.jpg"></div>
+       <div class="card1111"><img src="cartas/1111.jpg"></div>
+       <div class="card1121"><img src="cartas/1121.jpg"></div>
+       <div class="card1131"><img src="cartas/1131.jpg"></div>
+    </div>
+    <div id="copas">
+        <p>Copas</p>
+           <div class="card3131"><img src="cartas/3131.jpg"></div>
+           <div class="card3121"><img src="cartas/3121.jpg"></div>
+           <div class="card3111"><img src="cartas/3111.jpg"></div>
+           <div class="card3101"><img src="cartas/3101.jpg"></div>
+           <div class="card3091"><img src="cartas/3091.jpg"></div>
+           <div class="card3081"><img src="cartas/3081.jpg"></div>
+           <div class="card3071"><img src="cartas/3071.jpg"></div>
+           <div class="card3061"><img src="cartas/3061.jpg"></div>
+           <div class="card3051"><img src="cartas/3051.jpg"></div>
+           <div class="card3041"><img src="cartas/3041.jpg"></div>
+           <div class="card3031"><img src="cartas/3031.jpg"></div>
+           <div class="card3021"><img src="cartas/3021.jpg"></div>
+           <div class="card3011"><img src="cartas/3011.jpg"></div>
+    </div>
+    <div id="ouro">
+        <p>Ouro</p>
+        <div class="card4131"><img src="cartas/4131.jpg"></div>
+        <div class="card4121"><img src="cartas/4121.jpg"></div>
+        <div class="card4111"><img src="cartas/4111.jpg"></div>
+        <div class="card4101"><img src="cartas/4101.jpg"></div>
+        <div class="card4091"><img src="cartas/4091.jpg"></div>
+        <div class="card4081"><img src="cartas/4081.jpg"></div>
+        <div class="card4071"><img src="cartas/4071.jpg"></div>
+        <div class="card4061"><img src="cartas/4061.jpg"></div>
+        <div class="card4051"><img src="cartas/4051.jpg"></div>
+        <div class="card4041"><img src="cartas/4041.jpg"></div>
+        <div class="card4031"><img src="cartas/4031.jpg"></div>
+        <div class="card4021"><img src="cartas/4021.jpg"></div>
+        <div class="card4011"><img src="cartas/4011.jpg"></div>
+        </div>
+    <div id="espada">
+        <p>Espada</p>
+        <div class="card2011"><img src="cartas/2011.jpg"></div>
+        <div class="card2021"><img src="cartas/2021.jpg"></div>
+        <div class="card2031"><img src="cartas/2031.jpg"></div>
+        <div class="card2041"><img src="cartas/2041.jpg"></div>
+        <div class="card2051"><img src="cartas/2051.jpg"></div>
+        <div class="card2061"><img src="cartas/2061.jpg"></div>
+        <div class="card2071"><img src="cartas/2071.jpg"></div>
+        <div class="card2081"><img src="cartas/2091.jpg"></div>
+        <div class="card2091"><img src="cartas/2091.jpg"></div>
+        <div class="card2101"><img src="cartas/2101.jpg"></div>
+        <div class="card2111"><img src="cartas/2111.jpg"></div>
+        <div class="card2121"><img src="cartas/2121.jpg"></div>
+        <div class="card2131"><img src="cartas/2131.jpg"></div>
+    </div>    
+</body>
+</html>
