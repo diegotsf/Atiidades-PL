@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>atividade 7</title>
+</head>
+<body>
+
+    <script>
+        var n1, convert;
+        do{
+            n1 = parseFloat(window.prompt("Informe a quantidade de milhas marítmas: ", "0"));
+        }
+        while (isNaN(n1))
+
+        document.write("<p>" + "Milhas Marítimas: " + n1 + "</p>");
+
+        convert = (n1 * 1852)/1000;
+        document.write(n1 +" milhas marítimas equivale a " + convert + " quilômetros.");
+    </script>
+    
+</body>
+</html>

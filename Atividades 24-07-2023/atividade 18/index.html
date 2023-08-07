@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tabuadas</title>
+  <style>
+    .tabuada {
+      border-collapse: collapse;
+      margin: 10px;
+    }
+    .tabuada td {
+      border: 1px solid black;
+      padding: 5px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <table class="tabuada">
+    <tbody id="tabuadaContainer"></tbody>
+  </table>
+
+  <script>
+    function gerarTabuada(numero) {
+      var table = document.createElement('table');
+      table.className = 'tabuada';
+      
+      for (var i = 1; i <= 10; i++) {
+        var row = table.insertRow();
+        var cell = row.insertCell();
+        cell.textContent = `${numero} x ${i} = ${numero * i}`;
+      }
+
+      return table;
+    }
+
+    function criarLayoutTabuadas() {
+      var tabuadaContainer = document.getElementById('tabuadaContainer');
+      var numeroInicial = 1;
+
+      for (var linha = 1; linha <= 4; linha++) {
+        var row = document.createElement('tr');
+
+        for (var coluna = 1; coluna <= 5; coluna++) {
+          var numeroTabuada = numeroInicial + coluna - 1;
+          var tabuadaTable = gerarTabuada(numeroTabuada);
+          
+          var cell = document.createElement('td');
+          cell.appendChild(tabuadaTable);
+          row.appendChild(cell);
+        }
+
+        tabuadaContainer.appendChild(row);
+        numeroInicial += 5;
+      }
+    }
+
+    criarLayoutTabuadas();
+  </script>
+</body>
+</html>

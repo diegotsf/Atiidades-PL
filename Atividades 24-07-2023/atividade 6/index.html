@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 6</title>
+</head>
+<body>
+
+    <script lang="JavaScript">
+        var n1, n2, n3, n4, media;
+        do{
+            n1 = parseFloat(window.prompt("Informe o primeiro número: ", "0"));
+        }
+        while (isNaN(n1))
+        do{
+            n2 = parseFloat(window.prompt("Informe o segundo número: ", "0"));
+        }
+        while (isNaN(n2))
+
+        media = Math.sqrt(n1 * n2);
+
+        document.write("<p>" + "Primeiro Número: " + n1 + "</p>");
+        document.write("<p>" + "Segundo Número: " + n2 + "</p>");
+        
+        document.write("A média geométrica é " + media + ".");
+    </script>
+
+</body>
+</html>

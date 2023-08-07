@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 12</title>
+</head>
+<body>
+
+<script>
+
+    var peso, altura, r;
+    do  
+    {
+        peso = parseFloat(window.prompt("Informe seu peso: ", "0"))
+    }
+    while(isNaN(peso))
+    do  
+    {
+        altura = parseFloat(window.prompt("Informe sua altura: ", "0"))
+    }
+    while(isNaN(altura))
+
+    document.write("<p>" + "Seu peso é: " + peso + "</p>");
+    document.write("<p>" + "Sua altura é: " + altura + "</p>");
+
+    r =  peso / (altura * altura)
+
+    if(r < 20)
+    {
+        document.write("Você está abaixo do peso.")
+    }
+    if(20 <= r  && r < 25)
+    {
+        document.write("Você está no peso ideal.")
+    }
+    if(r >= 25)
+    {
+        document.write("Você está acima do peso.")
+    }
+</script>
+
+</body>
+</html>

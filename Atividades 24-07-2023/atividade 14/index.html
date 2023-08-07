@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>atividade 14</title>
+</head>
+<body>
+    
+<script>
+        var n1, n2, n3, hypotenuse, sumOfSquares;
+
+        do{
+            n1 = parseFloat(window.prompt("Insire o primeiro valor: "));
+        }
+        while(isNaN(n1))
+        do{
+            n2 = parseFloat(window.prompt("Insire segundo valor: "));
+        }
+        while(isNaN(n2))
+        do{
+            n3 = parseFloat(window.prompt("Insire o terceiro valor: "));
+        }
+        while(isNaN(n3))
+
+        hypotenuse = Math.max(n1, n2, n3);
+
+        if (hypotenuse === n1) {
+            sumOfSquares = n2 * n2 + n3 * n3;
+        } else if (hypotenuse === n2) {
+            sumOfSquares = n1 * n1 + n3 * n3;
+        } else {
+            sumOfSquares = n1 * n1 + n2 * n2;
+        }
+
+        if (sumOfSquares === hypotenuse * hypotenuse) {
+            document.writeln("Os valores formam um triângulo retângulo.");
+        } else {
+            document.writeln("Os valores NÃO formam um triângulo retângulo.");
+        }
+    </script>
+
+</body>
+</html>

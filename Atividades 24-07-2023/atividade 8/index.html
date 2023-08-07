@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>atividade 8</title>
+</head>
+<body>
+
+    <script>
+        var n1, convert;
+        do{
+            n1 = parseFloat(window.prompt("Informe a temperatura em graus Celsius: ", "0"));
+        }
+        while (isNaN(n1))
+
+        document.write("<p>" + "Temperatura em graus Celsius: " + n1 + "</p>");
+
+        convert = (n1 * 9/5) + 32
+
+        document.write(n1 +" graus Celsius equivale a " + convert + " graus Fahrenheit.");
+    </script>    
+
+</body>
+</html>

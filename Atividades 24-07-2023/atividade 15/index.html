@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 15</title>
+</head>
+<body>
+
+<script>
+
+    var n1, n2;
+
+    do
+    {
+        n1 = parseFloat(window.prompt("Informe o primeiro valor: ", "0"))
+    }
+    while(isNaN(n1))
+    do
+    {
+        n2 = parseFloat(window.prompt("Informe o segundo valor: ", "0"))
+    }
+    while(n1 >= n2)
+
+    document.write("<p>" + "Primeiro valor: " + n1 + "</p>")
+    document.write("<p>" + "Segundo valor: " + n2 + "</p>")
+
+</script>
+
+</body>
+</html>

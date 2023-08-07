@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 11</title>
+</head>
+<body>
+    
+    <script>
+        
+        var p1, p2, media;
+
+        do
+        {
+            p1 = parseFloat(window.prompt("Informe a primeira nota: ", "0"));
+        }
+        while(isNaN(p1))
+
+        do
+        {
+            p2 = parseFloat(window.prompt("Informe a segunda nota: ", "0"));
+        }
+        while(isNaN(p2)) 
+
+        document.write("<p>" + "Primeira Nota: " + p1 + "</p>");
+        document.write("<p>" + "Segunda  Nota: " + p2 + "</p>");
+
+        media = (p1 + 2*p2) / 3
+
+        if (media < 6)
+        {
+            document.write("<p>" + "Reprovado.");
+        }
+        else
+        {
+            document.write("<p>" + "Aprovado.")
+        }
+    </script>
+
+</body>
+</html>

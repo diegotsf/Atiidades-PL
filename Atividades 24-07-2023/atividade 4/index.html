@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 4</title>
+</head>
+<body>
+    
+    <script lang="JavaScript">
+
+        var n1, n2, area;
+        do{
+            n1 = parseFloat(window.prompt("Informe a medida da base:", "0"));
+        }
+        while (isNaN(n1));
+
+        document.write("<p>" + "Medida da base: " + n1 + "</p>");
+
+        do{
+            n2 = parseFloat(window.prompt("Informe a medida da altura:", "0"));
+        }
+        while (isNaN(n2));
+
+        document.write("<p>" + "Medida da altura: " + n2 + "</p>");
+
+        area = (n1 * n2) / 2;
+
+        document.write("A área do triângulo é " + area + ".");
+
+    </script>
+
+</body>
+</html>
