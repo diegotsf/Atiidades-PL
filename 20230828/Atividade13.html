@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script lang="Javascript">
+        function soma()
+        {
+        var n1, n2, n3, resultado;
+        n1 = parseInt(document.frm.txtnum1.value);
+        n2 = parseInt(document.frm.txtnum2.value);
+        n3 = parseInt(document.frm.txtnum3.value);
+        if(n1>n2+n3 || n2>n1+n2 || n3>n1+n2)
+        {
+            document.getElementById("alvo").innerHTML = "O valor inserido não representa um triângulo.";
+        }
+        else{
+        if(n1==n2 && n1==n3)
+        {
+        document.getElementById("alvo").innerHTML = "Triângulo Equilátero"
+        document.getElementById("tipo").src = "ilustracao-de-um-triangulo-equilatero-abc-cuja-area-esta-destacada-em-amarelo.jpg";
+        }
+        if(n1!=n2 && n1!=n3 && n2!=n3)
+        {
+        document.getElementById("alvo").innerHTML = "Triângulo Escaleno";
+        document.getElementById("tipo").src = "triangulo-escaleno.jpg";
+        }
+        if(n1==n2 && n1!=n3 || n1!=n2 && n1==n3 || n2==n3 && n2!=n1)
+        {
+        document.getElementById("alvo").innerHTML = "Triângulo Isósceles";
+        document.getElementById("tipo").src= "triangulo-isosceles.jpg";
+        }
+    }
+        
+        }
+    </script>
+</head>
+<body>
+  <form name = "frm">
+    1° Lado: <input type="Text" name="txtnum1" size="5"><br> 
+    2° Lado: <input type="Text" name="txtnum2" size="5"><br>
+    3° Lado: <input type="Text" name="txtnum3" size="5"><br>
+    <input type = "button" Value="Resultado" name="bdnvai" onclick="soma();">
+  
+  </form>
+  
+  <p id="alvo"></p>
+  <img src="" id="tipo">
+
+
+
+</body>
+</html>

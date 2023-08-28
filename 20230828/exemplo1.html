@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script lang="Javascript">
+        function soma()
+        {
+        var n1, n2, resultado;
+        n1 = parseInt(document.frm.txtnum1.value);
+        n2 = parseInt(document.frm.txtnum2.value);
+        resultado = n1 + n2;
+        //document.write(resultado);
+        document.getElementById("alvo").innerHTML = resultado;
+        }
+    </script>
+</head>
+<body>
+  <form name = "frm">
+    1° valor: <input type="Text" name="txtnum1" size="5"><br> 
+    2° valor: <input type="Text" name="txtnum2" size="5"><br>
+    <input type = "button" Value="Resultado" name="bdnvai" onclick="soma();">
+  
+  </form>
+  
+  <p id="alvo">
+
+  </p>
+
+</body>
+</html>

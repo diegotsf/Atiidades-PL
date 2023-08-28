@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script lang="Javascript">
+        function soma()
+        {
+        var n1, n2, resultado;
+        n2 = 1;
+        n1 = parseInt(document.frm.txtnum1.value);
+        if (n1>0)
+        {
+            do 
+            {
+            resultado=n1*n2;
+            document.getElementById("alvo" + n2).innerHTML = resultado;
+            n2++;
+            } while(n2<=10)
+        }
+        //document.write(resultado);
+    
+        }
+    </script>
+</head>
+<body>
+  <form name = "frm">
+    Valor: <input type="Text" name="txtnum1" size="5"><br> 
+    <input type = "button" Value="Resultado" name="bdnvai" onclick="soma();">
+  
+  </form>
+  
+<p id="alvo1"></p>
+<p id="alvo2"></p>
+<p id="alvo3"></p>
+<p id="alvo4"></p>
+<p id="alvo5"></p>
+<p id="alvo6"></p>
+<p id="alvo7"></p>
+<p id="alvo8"></p>
+<p id="alvo9"></p>
+<p id="alvo10"></p>
+
+
+
+  
+  
+
+  
+
+</body>
+</html>
