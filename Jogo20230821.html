@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!---->
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <title>Página Html</title>
+        <style>
+            p {
+                size : 20px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <script lang="JavaScript">
+            var n, i, j, o, k;
+            o = 0;
+            i = 1;
+            j = 100;
+            k = 1;
+            c = 0;
+            n = Math.floor(Math.random()*100); //Gera um número aleatório
+            do{
+            k = parseInt(prompt(("Insira a Quantidade de Jogadores que irão Jogar (De 2 a 5 Jogadores):")));
+            }while (k <= 1 || k >= 6)
+                k = k - 1;
+
+            do{
+                c++;
+            
+            o = parseInt(prompt(("Jogador " + c + " Insira um valor entre " + i + " e " + j)));
+
+            
+            if (o < i)                 //Mensagem caso o número for inserido incorretamente
+            {
+            prompt("Deixa de ser burro!"); 
+            i = i;
+            c--;   
+            }
+            if (o > j)
+            {
+            prompt("Deixa de ser burro!");
+            c--;
+            j = j;
+            } 
+
+            if (o>n && o < j)       //Número limite recebe o número inserido
+            {
+            j = o;
+            }
+
+            if (o<n && o > i)       //Número mínimo recebe o número inserido
+            {
+                i = o;
+
+            }
+            
+            if (c > k)              //Reseta o contador de jogadores
+            {
+                c = 0
+            }
+            }while (o != n)
+            
+            document.write("Jogador " + c + " Você Perdeu Otário!!!!!!");       //Mensagem para quem perdeu
+    
+
+        </script>
+    </body>
+</html>
