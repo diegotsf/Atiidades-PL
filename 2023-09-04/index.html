@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Formulário IFSP</title>
+    <script lang="javascript">
+        function processa() {
+            var pront, nome, email, dataNasc, per, curso, interesses, corPreferida, nivStress, observacoes, estadoCivil;
+            pront = document.frmDados.txtPront.value;
+            nome = document.frmDados.txtNome.value;
+            email = document.frmDados.txtEmail.value;
+            dataNasc = document.frmDados.txtNasc.value;
+            
+            if (document.frmDados.per.value == "m") { per = "(x) Manhã ( ) Tarde ( ) Noite"; }
+            else if (document.frmDados.per.value == "t") { per = "( ) Manhã (x) Tarde ( ) Noite"; }
+            else if (document.frmDados.per.value == "n") { per = "( ) Manhã ( ) Tarde (x) Noite"; }
+            else { per = "( ) Manhã ( ) Tarde ( ) Noite"; }
+
+            if (document.frmDados.lstEstadoCivil.value == "P") { curso = "Técnico em informática integrado ao ensino médio"; }
+            else if (document.frmDados.lstEstadoCivil.value == "E") { curso = "Técnico em Eventos integrado ao ensino médio"; }
+            else if (document.frmDados.lstEstadoCivil.value == "V") { curso = "Técnico em Automação Industrial"; }
+            else if (document.frmDados.lstEstadoCivil.value == "D") { curso = "Análise e desenvolvimento de Sistemas"; }
+            else if (document.frmDados.lstEstadoCivil.value == "B") { curso = "Licenciatura em Matemática"; }
+            else if (document.frmDados.lstEstadoCivil.value == "L") { curso = "Licenciatura em Letras"; }
+            else if (document.frmDados.lstEstadoCivil.value == "G") { curso = "Eletrônica"; }
+            else if (document.frmDados.lstEstadoCivil.value == "H") { curso = "Informática Básica"; }
+            else { curso = ""; }
+
+            estadoCivil = document.frmDados.lstEstadoCivil.value;
+
+            interesses = "( ) Música <br>" + "( ) Pintura <br>" + "( ) Teatro";
+            if (document.frmDados.interesse1.checked) { interesses = interesses.replace("( ) Música", "(x) Música"); }
+            if (document.frmDados.interesse2.checked) { interesses = interesses.replace("( ) Pintura", "(x) Pintura"); }
+            if (document.frmDados.interesse3.checked) { interesses = interesses.replace("( ) Teatro", "(x) Teatro"); }
+            interesses = interesses.replace(/,\s*$/, "");
+            
+            nivStress = document.frmDados.nivStress.value;
+            document.write("<table border='2' width='400'>");
+            document.write("<tr><td><img src='IFSPlogo.jpg' width='200' height='231'></td></tr>");
+            document.write("<tr><td>Prontuário: " + pront + "</td><br>");
+            document.write("<td>Nível de Satisfação: " + nivStress + "%" + "</td></tr><br>");
+
+            document.write("<tr><td colspan='2'>Nome: " + nome + "</td></tr><br>");
+            document.write("<tr><td colspan='2'>E-mail Institucional: " + email + "</td></tr><br>");
+            document.write("<tr><td>Curso: " + curso + "</td><br>");
+            document.write("<td>Ingresso : " + dataNasc + "</td></tr><br>");
+            document.write("<tr><td colspan='2'>Período: </td></tr><br>"); 
+            document.write("<tr><td colspan='2'>" + per + "</td></tr><br>");
+            
+            document.write("<tr><td colspan='2'>Extensões: <br>" + interesses + "</td></tr><br>");
+            document.write("</table>");
+        }
+    </script>
+</head>
+<body>
+    <form name="frmDados">
+        Prontuário: <input type="text" name="txtPront" value="-------"><br>
+        Nome: <input type="text" name="txtNome" value="Informe seu nome"><br>
+        E-mail Institucional: <input type="email" name="txtEmail" value="Informe@seuemail.aqui"><br>
+        Data de Ingresso no Curso: <input type="date" name="txtNasc"><br>
+        <label for="">Período: </label><br>
+        <input type="radio" name="per" id="man"  value="m">
+        <label for="man">Manhã </label>
+        <input type="radio" name="per" id="tar"  value="t">
+        <label for="tar">Tarde </label>
+        <input type="radio" name="per" id="noi"  value="n">
+        <label for="noi">Noite </label>
+        <br>
+        Curso:
+        <select name="lstEstadoCivil">
+            <option value="P">Técnico em informática integrado ao ensino médio</option>
+            <option value="E">Técnico em Eventos integrado ao ensino médio</option>
+            <option value="V">Técnico em Automação Industrial</option>
+            <option value="D">Análise e desenvolvimento de Sistemas</option>
+            <option value="B">Licenciatura em Matemática</option>
+            <option value="L">Licenciatura em Letras</option>
+            <option value="G">Eletrônica</option>
+            <option value="H">Informática Básica</option>
+        </select><br>
+        Extensões:<br>
+        <input type="checkbox" name="interesse1" value="Músicas">Música<br>
+        <input type="checkbox" name="interesse2" value="Séries">Pintura<br>
+        <input type="checkbox" name="interesse3" value="Filmes">Teatro<br>
+        Nível de Satisfação: <input type="range" name="nivStress" min="0" max="100"><br>
+        <input type="button" value="Enviar" onclick="processa();">
+        <input type="reset" value="Limpar"><br>
+    </form>
+</body>
+</html>
