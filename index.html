@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Calendário</title>
+<style>
+    table {
+        border-collapse: collapse;
+    }
+
+    table, th, td {
+        border: 1px solid black;
+        text-align: center;
+    }
+
+    th, td {
+        padding: 10px;
+    }
+
+    th {
+        background-color: lightgray;
+    }
+
+    .domingo {
+        color: red;
+    }
+</style>
+<script language="javascript">
+function mostraCalendario() {
+    var ano = prompt("Digite o ano:");
+    var mes = prompt("Digite o mês (1-12):") - 1; 
+
+    if (mes < 0 || mes > 11) {
+        alert("Mês inválido. Por favor, digite um número de 1 a 12.");
+        return;
+    }
+
+    var data = new Date(ano, mes, 1);
+    var primeiroDiaSemana = data.getDay(); 
+
+    var tabela = "<table><tr>";
+
+   
+    var diasDaSemana = ["Domingo", "Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado"];
+    for (var i = 0; i < 7; i++) {
+        tabela += "<th";
+        if (i === 0) {
+            tabela += " class='domingo'";
+        }
+        tabela += ">" + diasDaSemana[i] + "</th>";
+    }
+    tabela += "</tr><tr>";
+
+   
+    for (var i = 0; i < primeiroDiaSemana; i++) {
+        tabela += "<td></td>";
+    }
+
+    
+    while (data.getMonth() === mes) {
+        if (data.getDay() === 0) {
+            tabela += "<td class='domingo'>" + data.getDate() + "</td>"; 
+        } else {
+            tabela += "<td>" + data.getDate() + "</td>";
+        }
+
+        if ((data.getDay() + 1) % 7 === 0) {
+            tabela += "</tr><tr>"; 
+        }
+
+        data.setDate(data.getDate() + 1); 
+    }
+
+    tabela += "</tr></table>";
+
+    document.getElementById("calendario").innerHTML = tabela;
+}
+</script>
+</head>
+<body>
+<button onclick="mostraCalendario()">Mostrar Calendário</button>
+<div id="calendario"></div>
+</body>
+</html>
