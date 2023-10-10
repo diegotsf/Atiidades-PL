@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script lang="JavaScript">
+    </script>
+</head>
+<body>
+    <script>
+        var texto, a, b, vog, cons, car;
+        texto = prompt("Insira um texto qualquer: ");
+        vog = 0;
+        cons = 0;
+        car = 0;
+        for (i=0; i < texto.length; i++)
+            {
+                a = texto.charAt(i)
+                if( 
+                    (a == "a")|| (a == "b")|| (a == "c")|| (a == "d")|| (a == "e")|| (a == "f")|| (a == "g")|| (a == "h")|| (a == "i")|| (a == "j")|| (a == "k")|| (a == "l")|| (a == "m")|| (a == "n")|| (a == "o")|| (a == "p") || (a == "q")|| (a == "r")|| (a == "s")|| (a == "t")|| (a == "u")|| (a == "v")|| (a == "w")|| (a == "x")|| (a == "y")|| (a == "z")
+                    || (a == "A")|| (a == "B")|| (a == "C")|| (a == "D")|| (a == "E")|| (a == "F")|| (a == "G")|| (a == "H")|| (a == "I")|| (a == "J")|| (a == "K")|| (a == "L")|| (a == "M")|| (a == "N")|| (a == "O")|| (a == "P") || (a == "Q")|| (a == "R")|| (a == "S")|| (a == "T")|| (a == "U")|| (a == "V")|| (a == "W")|| (a == "X")|| (a == "Y")|| (a == "Z")
+                    || (a == "á")|| (a == "à")|| (a == "ã")|| (a == "â")|| (a == "é")|| (a == "è")|| (a == "ê")|| (a == "í")|| (a == "ì")|| (a == "î")|| (a == "ó")|| (a == "ò")|| (a == "õ")|| (a == "ô")|| (a == "ú")|| (a == "ù")|| (a == "û")|| (a == "ç")|| (a == "Ç")
+                    )
+                {
+                b = texto.charCodeAt(i)
+                if ((b == 97) || (b == 101) || (b == 105) || (b == 111) || (b == 117) || (b == 65) || (b == 69) || (b == 73) || (b == 79)|| (b == 85)|| (a == "á")|| (a == "à")|| (a == "ã")|| (a == "â")|| (a == "é")|| (a == "è")|| (a == "ê")|| (a == "í")|| (a == "ì")|| (a == "î")|| (a == "ó")|| (a == "ò")|| (a == "õ")|| (a == "ô")|| (a == "ú")|| (a == "ù")|| (a == "û"))
+                {
+                    vog = vog + 1
+                }
+                else
+                {
+                    cons = cons + 1
+                }
+                }
+                else
+                {
+                    car = car + 1
+                }               
+            }
+        document.write("<b>Texto Inserido: </b>" + texto)
+        document.write("<table border='1'>")
+        document.write("<tr><td>Quantidade de vogais:</td> <td>"+ vog +"</td></tr>")
+        document.write("<tr><td>Quantidade de consoantes:</td> <td>"+ cons +"</td></tr>")
+        document.write("<tr><td>Quantidade de dígitos:</td> <td>"+ texto.length +"</td></tr>")
+        document.write("<tr><td>Quantidade de outros caracteres:</td> <td>"+ car +"</td></tr>")
+        document.write("</table>")
+    </script>
+    <table>
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+</body>
+</html>

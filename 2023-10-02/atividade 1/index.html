@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 1</title>
+    <style>
+        td
+        {
+            width: 20px;
+            height: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        var txt;
+    txt = prompt("Insira um texto qualquer:");
+
+
+    document.write("<table border='1'>")
+    document.write("<tr>")
+    for(i=0; i < txt.length; i++)
+    {
+        document.write("<td>" + txt.charAt(i) + "</td>");
+    }
+    document.write("</tr>")
+    document.write("</table>")
+
+    document.write("<br>")
+
+    document.write("<table border='1'>")
+    for(i=0; i < txt.length; i++)
+    {
+        document.write("<tr>")
+        document.write("<td>" + txt.charAt(i) + "</td>");
+        document.write("</tr>")
+    }
+    document.write("</table>")
+
+    </script>
+</body>
+</html>

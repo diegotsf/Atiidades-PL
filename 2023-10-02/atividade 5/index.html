@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Atividade 5</title>
+</head>
+<body>
+    <script>
+        var nome, nome2, tmp, a, x;
+        a = 0;
+        x = 0;
+        do
+        {
+            nome = prompt("Insira seu nome completo: ")
+            for (i = nome.length - 1; i > 0; i--)
+            {
+                tmp = nome.charCodeAt(i)
+                if(tmp == 32)
+                {
+                    x = 1
+                }
+            }
+            if(x == 0)
+            {
+                nome = isNaN
+            }
+            if (nome == isNaN)
+            {
+                alert("Erro. Tente colocar como o exeplo: Diego Toscano Stoduto Ferreira.")
+            }
+        }
+        while(nome == isNaN)
+        i = nome.length - 1     
+        do
+        {
+            tmp = nome.charCodeAt(i)
+            if(tmp == 32)
+            {
+                a = nome.substr(i + 1, nome.length)
+                nome2 = nome.substr(0, i)
+            }   
+            i--
+        }
+        while(a == 0)
+        document.write("<b>Nome inserido: </b>" + nome)
+        document.write("<br>")
+        document.write("<b>Nome inserido no formato &ldquo; catálogo telefônico &rdquo;: </b>" + a + ", " + nome2)
+    </script>
+</body>
+</html>

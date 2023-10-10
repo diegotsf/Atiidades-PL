@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formatar Nome em Estilo de Referência Bibliográfica</title>
+</head>
+<body>
+    <h1>Formate seu nome de forma Bibliografica</h1>
+    <form id="nomeForm">
+        <label for="nome">Digite o nome completo:</label>
+        <input type="text" id="nome" name="nome">
+        <input type="button" value="Formatar" onclick="formatar()">
+    </form>
+
+
+    <script>
+        function formatar() {
+            var resul;
+            var completo = document.getElementById("nome").value;
+            var formatado = "";
+
+
+            var pal = completo.split(" ");
+
+
+            var Sobrenome = pal[pal.length - 1].toUpperCase();
+
+
+            for (var i = 0; i < pal.length - 1; i++) {
+                var ini = pal[i].charAt(0).toUpperCase();
+                formatado += ini + ". ";
+            }
+
+
+            resul = formatado += Sobrenome;
+
+          document.writeln(resul);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Verificar Palíndromo</title>
+    <script>
+        var input = window.prompt("Digite uma palavra ou frase:");
+
+        var textoSemEspacos = '';
+
+        for (var i = 0; i < input.length; i++) {
+            if (input[i] !== ' ') {
+                textoSemEspacos = textoSemEspacos.concat(input[i]);
+            }
+        }
+
+        var textoReverso = '';
+
+        for (var i = textoSemEspacos.length - 1; i >= 0; i--) {
+            if (textoSemEspacos[i] !== ' ') {
+                textoReverso += textoSemEspacos[i];
+            }
+        }
+
+        if (textoSemEspacos === textoReverso) {
+            document.write("É um palíndromo.");
+        } else {
+            document.write("Não é um palíndromo.");
+        }
+    </script>
+</head>
+<body>
+</body>
+</html>
