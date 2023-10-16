@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Criptografia</title>
+    <script>
+        var a, text, resul1, i; 
+
+        function encriptar() {
+            text = document.frm.texto.value;
+            var resul2 = 0; 
+            for(i = 0; i < text.length; i++) 
+            {
+                a = text.charCodeAt(i);
+                b = a * a;
+                resul1 = String.fromCharCode(b);
+                if(resul2 == 0)
+                {
+                    resul2 = resul1;
+                } 
+                else 
+                {
+                    resul2 = resul2.concat(resul1);
+                }
+            }
+            document.frm.resultado.value = resul2;
+        }
+
+        function desencriptar(num) 
+        {
+            text = document.frm.resultado.value; 
+            var resul2 = 0;
+            for(i = 0; i < text.length; i++) 
+            {
+                a = text.charCodeAt(i);
+                b = Math.sqrt(a);
+                resul1 = String.fromCharCode(b);
+                if(resul2 == 0) 
+                {
+                    resul2 = resul1;
+                } 
+                else 
+                {
+                    resul2 = resul2.concat(resul1);
+                }
+            }
+            document.frm.texto.value = resul2;
+        }
+    </script>
+</head>
+<body>
+    <h1>Insira um texto no espaço abaixo</h1>
+    <form name="frm">
+        <input type="text" name="texto" value="">
+        <br><br>
+        <input type="button" name="crip" value="Criptografar" onclick="encriptar();">
+        <input type="button" name="descri" value="Descriptografar" onclick="desencriptar();">
+        <br><br>
+        <input type="text" name="resultado" value="">
+    </form>
+
+</body>
+</html>
