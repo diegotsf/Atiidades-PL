@@ -1,0 +1,74 @@
+*{
+    text-align: center;
+}
+#Cauculadora
+{
+    position: absolute;
+    border: 3px solid black;
+    border-radius: 13px;
+    background-color: gray;
+    color: white;
+    top: 40%;
+    left: 50%;
+    width: 380px;
+    transform: translate(-50%, -50%);
+}
+
+#resultado
+{
+    width: 360px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: white;
+    font-size: 50px;
+    text-align: right;
+    margin: 10px;
+    color: black;
+}
+
+#botao
+{
+    width: 120px;
+    height: 50px;
+    font-size: 30px;
+    border: none;
+    border-radius: 20px;
+}
+
+.normal:hover
+{
+    cursor: pointer;
+    background-color: rgb(160, 160, 160);
+}
+
+.especial
+{
+    background-color: rgb(187, 187, 187);
+}
+
+.especial:hover
+{
+    cursor: pointer;
+    background-color: rgb(160, 160, 160);
+}
+
+.igual
+{
+    background-color: lightblue;
+}
+
+.igual:hover
+{
+    cursor: pointer;
+    background-color: rgb(129, 162, 173);
+}
+
+#delete
+{
+    width: 120px;
+    height: 50px;
+    font-size: 30px;
+    border: none;
+    border-radius: 20px;
+}
+
