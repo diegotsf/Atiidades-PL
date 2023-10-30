@@ -1,0 +1,37 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="custom.js"></script>
+</head>
+<body>
+    <table name="tabela" class="layout">
+        <tr>
+            <td colspan="3"><h1>Jogo da Velha</h1></td>
+        </tr>
+            <tr>
+                <td class="Jogo"><button class="butao1" id="1" onclick="insert('1')"></button></td>
+                <td class="Jogo"><button class="butao1" id="2" onclick="insert('2')"></button></td>
+                <td class="Jogo"><button class="butao1" id="3" onclick="insert('3')"></button></td>
+            </tr>
+            <tr>    
+                <td class="Jogo" ><button class="butao1" id="4" onclick="insert('4')"></button></td>
+                <td class="Jogo" ><button class="butao1" id="5" onclick="insert('5')"></button></td>
+                <td class="Jogo" ><button class="butao1" id="6" onclick="insert('6')"></button></td>
+            </tr>
+            <tr>
+                <td class="Jogo"><button class="butao1" id="7" onclick="insert('7')"></button></td>
+                <td class="Jogo"><button class="butao1" id="8" onclick="insert('8')"></button></td>
+                <td class="Jogo"><button class="butao1" id="9" onclick="insert('9')"></button></td>
+            </tr>
+            <tr>
+                <td colspan="2" id="turno">Turno: Jogador 1</td>
+                <td><button class="butao2" onclick="reinc()">REINICIAR</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.layout{
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 400px;
+    height: auto;
+}
+
+td.Jogo{
+    height: 120px;
+    border: 2px groove black;
+    border-radius: 10px;
+    padding: 0px;
+}
+
+.butao1{
+    font-size: xx-large;
+    height: 130px;
+    width: 200px;
+    border: 2px groove black;
+    border-radius: 10px;
+    padding: 0px;
+    background-color: white;
+}
+
+.butao2{
+    margin-top: 20px;
+}
+
+button:hover{
+    background-color: rgb(190, 190, 190);
+}
+
+#turno
+{
+    font-size: 30px;
+}
