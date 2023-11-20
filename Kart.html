@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="custom.js"></script>    
+    <style>
+        #nomePilotos
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            width: 900px;
+            height: auto;
+        }
+
+        table{
+            border: 4px solid black;
+            font-size: xx-large;
+        }
+
+        .pilotos{
+            height: 45px;
+            width: 740px;
+            font-size: 30px;
+        }
+
+        button{
+            width: 200px;
+            height: 60px;
+            font-size: 40px;
+            margin-top: 40px;
+            position: flex;
+            float: center;
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div id="nomePilotos">
+        <form name="formularioPilotos">
+            <h1 id="titulo">INSIRA OS PILOTOS PARTICIPANTES DA CORRIDA</h1>
+        <table id="tabelaPilotos">
+            <tr> <td>Piloto 1:</td> <td><input type="text" name="p1" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 2:</td> <td><input type="text" name="p2" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 3:</td> <td><input type="text" name="p3" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 4:</td> <td><input type="text" name="p4" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 5:</td> <td><input type="text" name="p5" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 6:</td> <td><input type="text" name="p6" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 7:</td> <td><input type="text" name="p7" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 8:</td> <td><input type="text" name="p8" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 9:</td> <td><input type="text" name="p9" class="pilotos" value=""></td></tr>
+            <tr> <td>Piloto 10:</td> <td><input type="text" name="p10" class="pilotos" value=""></td></tr>
+        </table>
+        <button id="confirmar" onclick="comecar()">Confirmar</button>
+        </form>
+    </div>
+    <script>
+        function comecar(){
+            alert("AVISO:   Nosso sistema gera tempos aleatórios para os pilotos entre 1 e 59 minutos!")
+            var 
+            media = []
+            nomes =[
+                document.formularioPilotos.p1.value,
+                document.formularioPilotos.p2.value,
+                document.formularioPilotos.p3.value,
+                document.formularioPilotos.p4.value,
+                document.formularioPilotos.p5.value,
+                document.formularioPilotos.p6.value,
+                document.formularioPilotos.p7.value,
+                document.formularioPilotos.p8.value,
+                document.formularioPilotos.p9.value,
+                document.formularioPilotos.p10.value
+            ]
+            pilotos = []
+            kart = []
+            melhor = [60, 60, 60, 60, 60, 60, 60, 60, 60, 60,]
+            tempo = []
+            piorTempo = 0;
+            piorPiloto = 0;
+            l = 0;
+
+            for(i = 0; i < 10; i++){
+                tempo[i] = new Array(3)
+            }
+
+            document.write("<table border='4'>")
+            document.write("<tr><td colspan='6'align='center'><h1>Voltas dos Pilotos</h1></td></tr>")
+            document.write("<tr><td align='center'><font size='10px'>KARTS</font></td>")
+            document.write("<td align='center'><font size='10px'>PILOTOS</font></td>")
+            document.write("<td align='center'><font size='10px'>1º volta</font></td>")
+            document.write("<td align='center'><font size='10px'>2º volta</font></td>")
+            document.write("<td align='center'><font size='10px'>3º volta</font></td>")
+            document.write("<td align='center'><font size='10px'>Melhor Tempo</font></td></tr>")
+            for(i = 0; i < 10; i++)
+            {   
+                document.write("<tr><td align='center'><font size='10px'>Kart "+ (i + 1) + "</font></td>")
+                document.write("<td align='center'><font size='10px'>" + nomes[i] + "</font></td>")
+                for(p = 0; p < 3; p++)
+                {
+                    tempo[i][p] = Math.floor(Math.random() * 59) + 1;
+                    if(tempo[i][p] > 60){
+                        while(tempo[i][p] > 60){
+                            tempo[i][p] = Math.floor(Math.random() * 59) + 1;
+                        }
+                    }
+                    if(piorTempo < tempo[i][p]){
+                        piorTempo = tempo[i][p]
+                        piorPiloto = i
+                    }
+                    if(melhor[i] > tempo[i][p]){
+                        melhor[i] = tempo[i][p]
+                    }
+                    document.write("<td align='center'><font size='10px'>" + tempo[i][p] + "</font></td>")
+                }
+            document.write("<td align='center' ><font size='10px'>" + melhor[i] + " minutos</font></td>")
+            document.write("</tr>")
+            }
+            document.write("</table>")
+        for(i  = 0; i < 10; i++){
+            pilotos[i] = melhor[i]
+        }
+        bubbleSort(melhor)
+        function bubbleSort(items) {
+          var length = items.length;
+          for (var i = 0; i < length; i++) {
+            for (var j = 0; j < (length - i - 1); j++) {
+              if (items[j] > items[j + 1]) {
+                var tmp = items[j];
+                items[j] = items[j + 1];
+                items[j + 1] = tmp;
+              }
+            }
+          }
+        }
+        for(a = 0; a < 10; a++){
+            for(b = 0; b < 10; b++){
+            if(melhor[a] == pilotos[b])
+            {
+                kart[a] = b + 1
+                pilotos[b] = 0
+                break;
+            }
+            }
+        }
+
+           
+        document.write("<table id='grid' border='1'>")
+        document.write("<tr><td align='center' colspan='2'><h1>GRID</h1></td><tr>")
+        for(i = 0; i < 9; i += 2){
+            document.write('<tr><td align="center"><font size="10px">Kart ' + kart[i] + '</font></td><td></td></tr>')
+            document.write('<tr><td><td align="center"><font size="10px">Kart ' + kart[i + 1] + '</font></td></tr>')
+        }
+        document.write("</table>")
+
+        document.write("<h1>DESTAQUES</h1>")
+        cont = kart[0]
+        pil = nomes[cont - 1]
+        media = Math.floor((tempo[cont - 1][0] + tempo[cont - 1][1] + tempo[cont - 1][2]) / 3)
+        pior = nomes[piorPiloto]
+        document.write("Piloto na pole-position e a média de tempo de suas voltas: " + pil + ", " + media + " minutos <br>")
+        document.write("Piloto com a pior volta e seu tempo: " + pior + ", " + piorTempo)
+    }
+    </script>
+
+</body>
+</html>
